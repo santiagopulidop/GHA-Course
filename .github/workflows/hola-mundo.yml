@@ -1,0 +1,12 @@
+name: Hola Mundo
+on: [push]
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Install java sdk
+        uses: actions/setup-java@4.5.0 
+      - name: Print Hello
+        run: java main.java
